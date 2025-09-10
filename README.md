@@ -1,9 +1,9 @@
-Vulgata Latina — Site estático (Bootstrap)
+Vulgata Latina — Site estático (Tailwind CSS)
 
 Sobre
 - Um capítulo por página com todos os versículos.
 - Cabeçalho com seleção de livro e capítulo (dropdowns).
-- Estilo discreto, minimalista, elegante usando Bootstrap 5.
+- Estilo discreto, minimalista, elegante usando Tailwind CSS (CDN).
 - Publicação via GitHub Pages (pasta `docs/`).
 
 Como funciona

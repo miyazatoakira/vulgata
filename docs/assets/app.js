@@ -47,21 +47,21 @@
     if (document.getElementById('translatorPanel')) return;
     const panel = document.createElement('div');
     panel.id = 'translatorPanel';
-    panel.className = 'translator-panel card shadow border-0';
+    panel.className = 'translator-panel bg-white border border-gray-200 rounded-lg shadow-lg';
     panel.innerHTML = `
-      <div class="card-body p-2">
-        <div class="d-flex justify-content-between align-items-center gap-2">
-          <div class="fw-semibold small">Palavra selecionada: <span id="selWord" class="text-primary"></span></div>
-          <button type="button" class="btn-close btn-sm" aria-label="Fechar"></button>
+      <div class="p-3">
+        <div class="flex items-center justify-between gap-2">
+          <div class="font-semibold text-sm">Palavra selecionada: <span id="selWord" class="text-blue-600"></span></div>
+          <button type="button" data-close class="inline-flex items-center justify-center w-6 h-6 rounded text-gray-500 hover:bg-gray-100" aria-label="Fechar">&times;</button>
         </div>
-        <div class="mt-2 small text-body-secondary">Tradução automática pode conter imprecisões.</div>
-        <div id="transResult" class="mt-2 small"></div>
-        <div class="mt-2 d-flex flex-wrap gap-2">
-          <button id="quickTranslateBtn" class="btn btn-sm btn-primary">Traduzir (la → pt-BR)</button>
-          <a target="_blank" id="googleLink" class="btn btn-sm btn-outline-secondary">Google</a>
-          <a target="_blank" id="wiktionaryLink" class="btn btn-sm btn-outline-secondary">Wiktionary</a>
-          <a target="_blank" id="logeionLink" class="btn btn-sm btn-outline-secondary">Logeion</a>
-          <a target="_blank" id="perseusLink" class="btn btn-sm btn-outline-secondary">Perseus</a>
+        <div class="mt-2 text-sm text-gray-500">Tradução automática pode conter imprecisões.</div>
+        <div id="transResult" class="mt-2 text-sm"></div>
+        <div class="mt-2 flex flex-wrap gap-2">
+          <button id="quickTranslateBtn" class="px-3 py-1.5 text-sm rounded bg-blue-600 text-white hover:bg-blue-700">Traduzir (la → pt-BR)</button>
+          <a target="_blank" id="googleLink" class="px-3 py-1.5 text-sm rounded border text-gray-700 hover:bg-gray-50">Google</a>
+          <a target="_blank" id="wiktionaryLink" class="px-3 py-1.5 text-sm rounded border text-gray-700 hover:bg-gray-50">Wiktionary</a>
+          <a target="_blank" id="logeionLink" class="px-3 py-1.5 text-sm rounded border text-gray-700 hover:bg-gray-50">Logeion</a>
+          <a target="_blank" id="perseusLink" class="px-3 py-1.5 text-sm rounded border text-gray-700 hover:bg-gray-50">Perseus</a>
         </div>
       </div>
     `;
@@ -91,21 +91,21 @@
     panel.querySelector('#perseusLink').href = `https://www.perseus.tufts.edu/hopper/morph?l=${encodeURIComponent(w)}&la=la`;
 
     // Bind actions
-    const closeBtn = panel.querySelector('.btn-close');
-    closeBtn.onclick = () => { panel.style.display = 'none'; };
+    const closeBtn = panel.querySelector('[data-close]');
+    if (closeBtn) closeBtn.onclick = () => { panel.style.display = 'none'; };
     const qt = panel.querySelector('#quickTranslateBtn');
     qt.onclick = async () => {
       const target = panel.querySelector('#transResult');
-      target.innerHTML = '<span class="text-muted">Traduzindo...</span>';
+      target.innerHTML = '<span class="text-gray-500">Traduzindo...</span>';
       try {
         const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(w)}&langpair=la|pt-BR`;
         const res = await fetch(url);
         const data = await res.json();
         const out = data?.responseData?.translatedText || '';
         if (out) target.textContent = out;
-        else target.innerHTML = '<span class="text-danger">Sem resultado.</span>';
+        else target.innerHTML = '<span class="text-red-600">Sem resultado.</span>';
       } catch (e) {
-        target.innerHTML = '<span class="text-danger">Falha ao traduzir.</span>';
+        target.innerHTML = '<span class="text-red-600">Falha ao traduzir.</span>';
       }
     };
   }
@@ -210,22 +210,21 @@
   }
 
   document.addEventListener('DOMContentLoaded', init);
-  // Robust navbar toggler fallback for mobile
+  // Tailwind navbar toggler (simple toggle of hidden class)
   document.addEventListener('DOMContentLoaded', () => {
-    try {
-      const toggler = document.querySelector('.navbar-toggler');
-      const collapseEl = document.getElementById('navbarSupportedContent');
-      if (!toggler || !collapseEl || !(window.bootstrap && window.bootstrap.Collapse)) return;
-      // Use capture to run before data-api; prevent duplicate toggles
-      toggler.addEventListener('click', (ev) => {
-        if (window.innerWidth >= 992) return; // only care on mobile
-        ev.preventDefault();
-        ev.stopPropagation();
-        const inst = bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: false });
-        inst.toggle();
-      }, true);
-    } catch (_e) {
-      // no-op
+    const toggle = document.getElementById('navbarToggle');
+    const menu = document.getElementById('navbarMenu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const isHidden = menu.classList.contains('hidden');
+        if (isHidden) {
+          menu.classList.remove('hidden');
+          toggle.setAttribute('aria-expanded', 'true');
+        } else {
+          menu.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     }
   });
 })();
