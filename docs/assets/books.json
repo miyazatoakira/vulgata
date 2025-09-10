@@ -1,0 +1,392 @@
+[
+  {
+    "name": "Genesis",
+    "slug": "genesis",
+    "chapters": 50
+  },
+  {
+    "name": "Exodus",
+    "slug": "exodus",
+    "chapters": 40
+  },
+  {
+    "name": "Leviticus",
+    "slug": "leviticus",
+    "chapters": 27
+  },
+  {
+    "name": "Numeri",
+    "slug": "numbers",
+    "chapters": 36
+  },
+  {
+    "name": "Deuteronomium",
+    "slug": "deuteronomy",
+    "chapters": 34
+  },
+  {
+    "name": "Iosue",
+    "slug": "joshua",
+    "chapters": 24
+  },
+  {
+    "name": "Iudices",
+    "slug": "judges",
+    "chapters": 21
+  },
+  {
+    "name": "Ruth",
+    "slug": "ruth",
+    "chapters": 4
+  },
+  {
+    "name": "I Regum",
+    "slug": "i-samuel",
+    "chapters": 31
+  },
+  {
+    "name": "II Regum",
+    "slug": "ii-samuel",
+    "chapters": 24
+  },
+  {
+    "name": "III Regum",
+    "slug": "i-kings",
+    "chapters": 22
+  },
+  {
+    "name": "IV Regum",
+    "slug": "ii-kings",
+    "chapters": 25
+  },
+  {
+    "name": "I Paralipomenon",
+    "slug": "i-chronicles",
+    "chapters": 29
+  },
+  {
+    "name": "II Paralipomenon",
+    "slug": "ii-chronicles",
+    "chapters": 36
+  },
+  {
+    "name": "Esdrae I",
+    "slug": "ezra",
+    "chapters": 10
+  },
+  {
+    "name": "Esdrae II (Nehemias)",
+    "slug": "nehemiah",
+    "chapters": 13
+  },
+  {
+    "name": "Tobias",
+    "slug": "tobit",
+    "chapters": 14
+  },
+  {
+    "name": "Iudith",
+    "slug": "judith",
+    "chapters": 16
+  },
+  {
+    "name": "Esther",
+    "slug": "esther",
+    "chapters": 16
+  },
+  {
+    "name": "I Machabaeorum",
+    "slug": "i-maccabees",
+    "chapters": 16
+  },
+  {
+    "name": "II Machabaeorum",
+    "slug": "ii-maccabees",
+    "chapters": 15
+  },
+  {
+    "name": "Iob",
+    "slug": "job",
+    "chapters": 42
+  },
+  {
+    "name": "Psalmi",
+    "slug": "psalms",
+    "chapters": 150
+  },
+  {
+    "name": "Proverbia",
+    "slug": "proverbs",
+    "chapters": 31
+  },
+  {
+    "name": "Ecclesiastes",
+    "slug": "ecclesiastes",
+    "chapters": 12
+  },
+  {
+    "name": "Canticum Canticorum",
+    "slug": "song-of-solomon",
+    "chapters": 8
+  },
+  {
+    "name": "Sapientia",
+    "slug": "wisdom",
+    "chapters": 19
+  },
+  {
+    "name": "Ecclesiasticus (Sirach)",
+    "slug": "sirach",
+    "chapters": 51
+  },
+  {
+    "name": "Isaias",
+    "slug": "isaiah",
+    "chapters": 66
+  },
+  {
+    "name": "Ieremias",
+    "slug": "jeremiah",
+    "chapters": 52
+  },
+  {
+    "name": "Lamentationes",
+    "slug": "lamentations",
+    "chapters": 5
+  },
+  {
+    "name": "Baruch",
+    "slug": "baruch",
+    "chapters": 6
+  },
+  {
+    "name": "Ezechiel",
+    "slug": "ezekiel",
+    "chapters": 48
+  },
+  {
+    "name": "Daniel",
+    "slug": "daniel",
+    "chapters": 14
+  },
+  {
+    "name": "Osee",
+    "slug": "hosea",
+    "chapters": 14
+  },
+  {
+    "name": "Ioel",
+    "slug": "joel",
+    "chapters": 3
+  },
+  {
+    "name": "Amos",
+    "slug": "amos",
+    "chapters": 9
+  },
+  {
+    "name": "Abdias",
+    "slug": "obadiah",
+    "chapters": 1
+  },
+  {
+    "name": "Ionas",
+    "slug": "jonah",
+    "chapters": 4
+  },
+  {
+    "name": "Michaeas",
+    "slug": "micah",
+    "chapters": 7
+  },
+  {
+    "name": "Nahum",
+    "slug": "nahum",
+    "chapters": 3
+  },
+  {
+    "name": "Habacuc",
+    "slug": "habakkuk",
+    "chapters": 3
+  },
+  {
+    "name": "Sophonias",
+    "slug": "zephaniah",
+    "chapters": 3
+  },
+  {
+    "name": "Aggaeus",
+    "slug": "haggai",
+    "chapters": 2
+  },
+  {
+    "name": "Zacharias",
+    "slug": "zechariah",
+    "chapters": 14
+  },
+  {
+    "name": "Malachias",
+    "slug": "malachi",
+    "chapters": 4
+  },
+  {
+    "name": "Matthaeus",
+    "slug": "matthew",
+    "chapters": 28
+  },
+  {
+    "name": "Marcus",
+    "slug": "mark",
+    "chapters": 16
+  },
+  {
+    "name": "Lucas",
+    "slug": "luke",
+    "chapters": 24
+  },
+  {
+    "name": "Ioannes",
+    "slug": "john",
+    "chapters": 21
+  },
+  {
+    "name": "Actus Apostolorum",
+    "slug": "acts",
+    "chapters": 28
+  },
+  {
+    "name": "Ad Romanos",
+    "slug": "romans",
+    "chapters": 16
+  },
+  {
+    "name": "I ad Corinthios",
+    "slug": "i-corinthians",
+    "chapters": 16
+  },
+  {
+    "name": "II ad Corinthios",
+    "slug": "ii-corinthians",
+    "chapters": 13
+  },
+  {
+    "name": "Ad Galatas",
+    "slug": "galatians",
+    "chapters": 6
+  },
+  {
+    "name": "Ad Ephesios",
+    "slug": "ephesians",
+    "chapters": 6
+  },
+  {
+    "name": "Ad Philippenses",
+    "slug": "philippians",
+    "chapters": 4
+  },
+  {
+    "name": "Ad Colossenses",
+    "slug": "colossians",
+    "chapters": 4
+  },
+  {
+    "name": "I ad Thessalonicenses",
+    "slug": "i-thessalonians",
+    "chapters": 5
+  },
+  {
+    "name": "II ad Thessalonicenses",
+    "slug": "ii-thessalonians",
+    "chapters": 3
+  },
+  {
+    "name": "I ad Timotheum",
+    "slug": "i-timothy",
+    "chapters": 6
+  },
+  {
+    "name": "II ad Timotheum",
+    "slug": "ii-timothy",
+    "chapters": 4
+  },
+  {
+    "name": "Ad Titum",
+    "slug": "titus",
+    "chapters": 3
+  },
+  {
+    "name": "Ad Philemonem",
+    "slug": "philemon",
+    "chapters": 1
+  },
+  {
+    "name": "Ad Hebraeos",
+    "slug": "hebrews",
+    "chapters": 13
+  },
+  {
+    "name": "Iacobi",
+    "slug": "james",
+    "chapters": 5
+  },
+  {
+    "name": "I Petri",
+    "slug": "i-peter",
+    "chapters": 5
+  },
+  {
+    "name": "II Petri",
+    "slug": "ii-peter",
+    "chapters": 3
+  },
+  {
+    "name": "I Ioannis",
+    "slug": "i-john",
+    "chapters": 5
+  },
+  {
+    "name": "II Ioannis",
+    "slug": "ii-john",
+    "chapters": 1
+  },
+  {
+    "name": "III Ioannis",
+    "slug": "iii-john",
+    "chapters": 1
+  },
+  {
+    "name": "Iudae",
+    "slug": "jude",
+    "chapters": 1
+  },
+  {
+    "name": "Apocalypsis Ioannis",
+    "slug": "revelation-of-john",
+    "chapters": 22
+  },
+  {
+    "name": "Additional Psalm",
+    "slug": "additional-psalm",
+    "chapters": 1
+  },
+  {
+    "name": "I Esdras",
+    "slug": "i-esdras",
+    "chapters": 9
+  },
+  {
+    "name": "II Esdras",
+    "slug": "ii-esdras",
+    "chapters": 16
+  },
+  {
+    "name": "Laodiceans",
+    "slug": "laodiceans",
+    "chapters": 1
+  },
+  {
+    "name": "Prayer of Manasses",
+    "slug": "prayer-of-manasses",
+    "chapters": 1
+  }
+]

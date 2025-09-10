@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vulgata — Zacharias 5</title>
+    <meta name="description" content="Vulgata Latina — capítulo por página">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary border-bottom sticky-top" data-bs-theme="light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Vulgata</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="ms-auto d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 w-100 w-lg-auto">
+            <div class="d-flex align-items-center gap-2 w-100 w-lg-auto">
+              <label for="bookSelect" class="form-label mb-0 small text-muted">Livro</label>
+              <select id="bookSelect" class="form-select form-select-sm w-100" style="min-width: 200px;"></select>
+            </div>
+            <div class="d-flex align-items-center gap-2 w-100 w-lg-auto">
+              <label for="chapterSelect" class="form-label mb-0 small text-muted">Capítulo</label>
+              <select id="chapterSelect" class="form-select form-select-sm w-100" style="min-width: 110px;"></select>
+            </div>
+            <span class="badge text-bg-light border d-none d-lg-inline-block" id="chaptersCountBadge" title="Total de capítulos do livro"></span>
+            <button id="goBtn" class="btn btn-sm btn-primary w-100 w-lg-auto">Ir</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-lg my-4 px-3">
+      <div class="reading-container mx-auto">
+      <h1 class="chapter-title h3 mb-4">Zacharias 5</h1>
+<div class="verse">
+  <span class="verse-num">1</span><span class="verse-text">Et conversus sum, et levavi oculos meos, et vidi, et ecce volumen volans.</span>
+</div>
+<hr>
+<div class="verse">
+  <span class="verse-num">2</span><span class="verse-text">Et dixit ad me : Quid tu vides ? Et dixi : Ego video volumen volans : longitudo ejus viginti cubitorum, et latitudo ejus decem cubitorum.</span>
+</div>
+<hr>
+<div class="verse">
+  <span class="verse-num">3</span><span class="verse-text">Et dixit ad me : Hæc est maledictio quæ egreditur super faciem omnis terræ : quia omnis fur, sicut ibi scriptum est, judicabitur, et omnis jurans ex hoc similiter judicabitur.</span>
+</div>
+<hr>
+<div class="verse">
+  <span class="verse-num">4</span><span class="verse-text">Educam illud, dicit Dominus exercituum : et veniet ad domum furis, et ad domum jurantis in nomine meo mendaciter : et commorabitur in medio domus ejus, et consumet eam, et ligna ejus, et lapides ejus.</span>
+</div>
+<hr>
+<div class="verse">
+  <span class="verse-num">5</span><span class="verse-text">Et egressus est angelus qui loquebatur in me, et dixit ad me : Leva oculos tuos, et vide quid est hoc quod egreditur.</span>
+</div>
+<hr>
+<div class="verse">
+  <span class="verse-num">6</span><span class="verse-text">Et dixi : Quidnam est ? Et ait : Hæc est amphora egrediens. Et dixit : Hæc est oculus eorum in universa terra.</span>
+</div>
+<hr>
+<div class="verse">
+  <span class="verse-num">7</span><span class="verse-text">Et ecce talentum plumbi portabatur, et ecce mulier una sedens in medio amphoræ.</span>
+</div>
+<hr>
+<div class="verse">
+  <span class="verse-num">8</span><span class="verse-text">Et dixit : Hæc est impietas. Et projecit eam in medio amphoræ, et misit massam plumbeam in os ejus.</span>
+</div>
+<hr>
+<div class="verse">
+  <span class="verse-num">9</span><span class="verse-text">Et levavi oculos meos, et vidi : et ecce duæ mulieres egredientes : et spiritus in alis earum, et habebant alas quasi alas milvi, et levaverunt amphoram inter terram et cælum.</span>
+</div>
+<hr>
+<div class="verse">
+  <span class="verse-num">10</span><span class="verse-text">Et dixi ad angelum qui loquebatur in me : Quo istæ deferunt amphoram ?</span>
+</div>
+<hr>
+<div class="verse">
+  <span class="verse-num">11</span><span class="verse-text">Et dixit ad me : Ut ædificetur ei domus in terra Sennaar, et stabiliatur, et ponatur ibi super basem suam.</span>
+</div>
+<hr>
+      </div>
+    </main>
+
+    <script>
+      window.APP_CONFIG = {
+        assetsBase: "../assets",
+        rootBase: "../",
+        current: { bookSlug: "zechariah", chapter: 5 }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLE4bEJ0hZl5W8SIv9K0Uod8GCExl3Og8ifw" crossorigin="anonymous"></script>
+    <script src="../assets/app.js"></script>
+  </body>
+</html>
