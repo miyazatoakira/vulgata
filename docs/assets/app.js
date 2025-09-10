@@ -201,6 +201,17 @@
       chapterSelect().addEventListener('change', () => {
         // On chapter change, just prepare selection; navigation via button.
       });
+      // Enable/disable Go button
+      const updateGoState = () => {
+        const b = bSel.value;
+        const c = chapterSelect().value;
+        const enabled = Boolean(b && c);
+        const btn = goBtn();
+        btn.disabled = !enabled;
+      };
+      bSel.addEventListener('change', updateGoState);
+      chapterSelect().addEventListener('change', updateGoState);
+      updateGoState();
       goBtn().addEventListener('click', navigateToSelected);
       // Init translator after UI is ready
       initTranslator();
@@ -210,21 +221,58 @@
   }
 
   document.addEventListener('DOMContentLoaded', init);
-  // Tailwind navbar toggler (simple toggle of hidden class)
+  // Tailwind navbar toggler with outside-click/escape support
   document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('navbarToggle');
     const menu = document.getElementById('navbarMenu');
-    if (toggle && menu) {
-      toggle.addEventListener('click', () => {
-        const isHidden = menu.classList.contains('hidden');
-        if (isHidden) {
-          menu.classList.remove('hidden');
-          toggle.setAttribute('aria-expanded', 'true');
-        } else {
-          menu.classList.add('hidden');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
+    const navRoot = document.querySelector('nav[data-nav-root]');
+    if (!toggle || !menu || !navRoot) return;
+
+    const closeMenu = () => {
+      if (!menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    };
+    const openMenu = () => {
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+    };
+    const toggleMenu = () => {
+      if (menu.classList.contains('hidden')) openMenu();
+      else closeMenu();
+    };
+
+    toggle.addEventListener('click', toggleMenu);
+
+    // Close on outside click (only on small screens)
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth >= 1024) return; // lg breakpoint
+      if (!navRoot.contains(e.target)) closeMenu();
+    });
+    // Close with Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+    // Keep state consistent on resize
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) {
+        menu.classList.remove('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+      } else {
+        menu.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    // Initial state (hidden on small, visible on lg)
+    if (window.innerWidth >= 1024) {
+      menu.classList.remove('hidden');
+      toggle.setAttribute('aria-expanded', 'true');
+    } else {
+      menu.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
     }
   });
 })();
