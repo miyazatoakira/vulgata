@@ -10,26 +10,26 @@
     <link rel="stylesheet" href="../assets/style.css">
   </head>
   <body>
-    <nav class="sticky top-0 border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm" data-nav-root>
+    <nav class="sticky top-0 border-b bg-white shadow-sm" data-nav-root>
       <div class="max-w-screen-lg mx-auto px-3">
-        <div class="h-14 flex items-center justify-between">
-          <a class="font-semibold tracking-tight text-gray-900 hover:text-blue-700 transition-colors" href="../index.html">Vulgata</a>
-          <button id="navbarToggle" class="lg:hidden inline-flex items-center justify-center p-2 rounded text-gray-700 hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500" aria-controls="navbarMenu" aria-expanded="false" aria-label="Abrir menu">
+        <div class="flex flex-wrap items-center gap-2 py-2">
+          <a class="shrink-0 font-semibold tracking-tight text-gray-900 hover:text-blue-700 transition-colors" href="../index.html">Vulgata</a>
+          <button id="navbarToggle" class="ml-auto lg:hidden inline-flex items-center justify-center p-2 rounded text-gray-700 hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500" aria-controls="navbarMenu" aria-expanded="false" aria-label="Abrir menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
           </button>
-        </div>
-        <div id="navbarMenu" class="hidden lg:flex lg:items-center lg:justify-end gap-2 py-2">
-          <div class="flex flex-col lg:flex-row lg:items-center gap-2 w-full lg:w-auto">
-            <div class="flex items-center gap-2 w-full lg:w-auto">
-              <label for="bookSelect" class="mb-0 text-sm text-gray-600">Livro</label>
-              <select id="bookSelect" class="w-full lg:w-auto min-w-[200px] border rounded px-2 py-1 text-sm bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"></select>
+          <div id="navbarMenu" class="order-last w-full lg:order-none lg:w-auto hidden lg:flex items-center justify-start lg:justify-end gap-2">
+            <div class="flex flex-col lg:flex-row lg:items-center gap-2 w-full lg:w-auto">
+              <div class="flex items-center gap-2 w-full lg:w-auto">
+                <label for="bookSelect" class="mb-0 text-sm text-gray-600">Livro</label>
+                <select id="bookSelect" class="w-full lg:w-auto min-w-[200px] border rounded px-2 py-1 text-sm bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"></select>
+              </div>
+              <div class="flex items-center gap-2 w-full lg:w-auto">
+                <label for="chapterSelect" class="mb-0 text-sm text-gray-600">Capítulo</label>
+                <select id="chapterSelect" class="w-full lg:w-auto min-w-[110px] border rounded px-2 py-1 text-sm bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"></select>
+              </div>
+              <span class="hidden lg:inline-block text-xs text-gray-700 border rounded px-2 py-0.5" id="chaptersCountBadge" title="Total de capítulos do livro"></span>
+              <button id="goBtn" class="w-full lg:w-auto inline-flex items-center justify-center px-3 py-1.5 text-sm rounded-md bg-blue-600 text-white hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed">Ir</button>
             </div>
-            <div class="flex items-center gap-2 w-full lg:w-auto">
-              <label for="chapterSelect" class="mb-0 text-sm text-gray-600">Capítulo</label>
-              <select id="chapterSelect" class="w-full lg:w-auto min-w-[110px] border rounded px-2 py-1 text-sm bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"></select>
-            </div>
-            <span class="hidden lg:inline-block text-xs text-gray-700 border rounded px-2 py-0.5" id="chaptersCountBadge" title="Total de capítulos do livro"></span>
-            <button id="goBtn" class="w-full lg:w-auto inline-flex items-center justify-center px-3 py-1.5 text-sm rounded-md bg-blue-600 text-white hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed">Ir</button>
           </div>
         </div>
       </div>
